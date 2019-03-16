@@ -1,0 +1,193 @@
+@font-face {
+ font-family: xkcd-script;
+ src: url(../font/xkcd-script.woff);
+ font-weight: bold;
+}
+
+body {
+ font-family: xkcd-script;
+}
+
+#pagecontainer {
+ width: 80%;
+ padding-left: 10%;
+}
+
+#info {
+ padding-bottom: 30px;
+}
+
+#yearslider {
+ margin: 2em auto;
+ border:solid 2px #41403E;
+ border-top-left-radius: 255px 15px;
+ border-top-right-radius: 15px 225px;
+ border-bottom-right-radius: 225px 15px;
+ border-bottom-left-radius:15px 255px;
+}
+
+#periodline {
+ top: -50px;
+ position: relative;
+}
+
+#periodline .periodlabel {
+ position: absolute;
+ text-align: center;
+ font-family: xkcd-script;
+ font-size: 90%;
+ border-top-left-radius: 255px 15px;
+ border-top-right-radius: 15px 225px;
+ border-bottom-right-radius: 225px 15px;
+ border-bottom-left-radius:15px 255px;
+ border:solid 2px #41403E;
+}
+
+#eventline .eventlabel {
+ position: absolute;
+ text-align: center;
+ font-family: xkcd-script;
+ font-size: 80%;
+ background:url(../img/eventpip.png);
+ background-repeat: no-repeat;
+ padding-left: 15px;
+ height: 24px;
+}
+
+#yearslider .ui-slider-handle {
+ background:url(../img/indicator.png);
+ background-repeat: no-repeat;
+ width: 24px;
+ height: 24px;
+ position: absolute;
+ left: -12px;
+ border: none;
+}
+
+#yearbox {
+ padding-top: 30px;
+ padding-bottom: 20px;
+ font-size: 110%;
+}
+
+.container {
+ display: block;
+ position: relative;
+ padding-left: 35px;
+ margin-bottom: 12px;
+ cursor: pointer;
+ font-size: 22px;
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+ height: 0;
+ width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+ position: absolute;
+ top: 5;
+ left: 0;
+ height: 16px;
+ width: 16px;
+ background-color: #FFFFFF;
+ border-top-left-radius: 255px 15px;
+ border-top-right-radius: 15px 225px;
+ border-bottom-right-radius: 225px 15px;
+ border-bottom-left-radius:15px 255px;
+ border:solid 2px #41403E;
+ background:url('../img/empty.png') no-repeat;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+ display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+ background:url('../img/check.png') no-repeat;
+ height: 24px;
+ width: 24px;
+ padding: 0 0 0 0px;
+ position: absolute;
+ top: -5;
+ left: -1;
+ z-index: 1;
+}
+
+/* Some tweaks to jqplot standard CSS */
+.jqplot-target {
+ color: #000000;
+ font-family: xkcd-script;
+ font-size: 90%;
+}
+
+table.jqplot-table-legend, table.jqplot-cursor-legend {
+ border-top-left-radius: 255px 15px;
+ border-top-right-radius: 15px 225px;
+ border-bottom-right-radius: 225px 15px;
+ border-bottom-left-radius:15px 255px;
+ border:solid 2px #41403E;
+ font-size: 1em;
+ padding: 5px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  display: block;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div.layer {
+ position:relative;
+}
+
+#eventline .layerline {
+ position:relative;
+ height: 25px;
+ bottom: -25px;
+}
+
+#periodline .layerline {
+ position:relative;
+ height: 25px;
+}
+
+/* Semi responsive */
+@media screen and (max-width: 1100px) {
+ #piechart {
+  display: none;
+ }
+ #periodline .periodlabel {
+  display: none;
+ }
+}
+
+@media screen and (max-width: 1550px) {
+ #yearslider .periodlabel {
+  display: none;
+ }
+}
