@@ -148,7 +148,7 @@ function getdata(startyear, endyear) {
  if (typeof datacache[endyear] != "undefined") {
   calculate(startyear, endyear);
  } else {
-  $.getJSON("http://api.population.io/1.0/population/" + endyear + "/World/", function(data) {
+  $.getJSON("https://api.population.io/1.0/population/" + endyear + "/World/", function(data) {
    datacache[endyear] = data;
    calculate(startyear, endyear);
   });
