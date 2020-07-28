@@ -5,6 +5,9 @@ date:   2019-03-16 21:30:00 +0200
 category: statistics
 tags: [software, web, statistics]
 ---
+
+_Sadly the population.io API has been out of order for quite some time and this experiment no longer works_
+
 This is a short introduction to a statistics experiment dubbed the ['Deathslider'](/static/deathslider/index.html).
 
 The Deathslider
